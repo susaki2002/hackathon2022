@@ -16,7 +16,7 @@ document.body.appendChild(h1);
 const url = "./notebook7c3c0a745c.ipynb";
 axios
   .post(url, {
-    player: comment,
+     comment
   })
   .then(function (response) {
     console.log(response);
