@@ -9,8 +9,12 @@ body{
 }
 
 .test{
-    width: 1000px;
-    height: 560px;
+    text-align: center;
+}
+
+.test01{
+    width: 1300px;
+    height: 720px;
     background: #000;
 }
 

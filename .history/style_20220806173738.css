@@ -9,13 +9,13 @@ body{
 }
 
 .test{
-    width: 1000px;
-    height: 560px;
+    width: 1300px;
+    height: 720px;
     background: #000;
 }
 
 .example4{
-    display: block;
+
     width: 150px;
     background: #c8eac3;
     color: #000;

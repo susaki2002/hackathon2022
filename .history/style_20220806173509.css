@@ -8,9 +8,13 @@ body{
     text-align: center;
 }
 
+div{
+    te
+}
 .test{
-    width: 1000px;
-    height: 560px;
+    text-align: center;
+    width: 1300px;
+    height: 720px;
     background: #000;
 }
 
