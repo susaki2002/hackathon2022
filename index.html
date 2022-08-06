@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-<script>
-$(function() {
-    $(".example4").click(function() {
-        $(this).toggleClass("click");
-    });
-});
-</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +8,21 @@ $(function() {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="index.js"></script>
     <div>
-        
+
     </div>
     <p>
-        <input type="button" value="開始" class="example4">
+        <input type="button" value="開始" class="example4" >
     </p>
+    <!-- <script>
+        $(function() {
+            $(".example4").click(function() {
+                $(this).toggleClass("click");
+            });
+        });
+    </script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="index.js"> </script>
+
 </body>
 </html>
