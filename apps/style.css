@@ -142,6 +142,7 @@ section h2 span {
 
 #sec02{
 	padding: 0 !important;
+	background: #efebe4;
 }
 
 #sec02 header{
@@ -170,6 +171,7 @@ section h2 span {
 
 .sec02-content{
 	margin: 80px auto;
+	padding-bottom: 80px;
 }
 
 
@@ -208,38 +210,29 @@ div img{
     height: 400px;
     background: #f5f5f5;
     margin: -60px auto;
-    margin-bottom: 200px;
+    margin-bottom: 32px;
     padding: 24px 12px;
     border-radius: 64px;
     border: 3px solid #ffe3e5;
 }
 
-.left-content{
-    float: left;
-    clear: both;
-    margin: 20px 0 0 64px;
-    text-align: left;
-}
-
 .left-text{
     float: left;
-    background-color: #bbded6;
-    padding: 12px 20px;
-    border-radius: 20px 20px 20px 0;
-}
-
-
-.right-content{
-    float: right;
     clear: both;
-    margin: 40px 40px 0 40px;
-    text-align: right;
+    background-color: #bbded6;
+    margin: 20px 0 0 56px;
+    padding: 12px 20px;
+    text-align: left;
+    border-radius: 20px 20px 20px 0;
 }
 
 .right-text{
     float: right;
+    clear: both;
     background-color: #fae3d9;
+    margin: 40px 56px 0 40px;
     padding: 12px 20px;
+    text-align: right;
     border-radius: 20px 20px 0 20px;
 }
 
