@@ -10,10 +10,13 @@ $(function() {
 });
 function OnButtonClick() {
           target = document.getElementById("button");
+          target_2=document.getElementById("person");
           if (target.value == "START"){
               target.value="STOP";
+              target_2.src="images/person.png";
           }else{
               target.value="START";
+              target_2.src="images/person.gif";
           };
         };
 </script>
@@ -29,7 +32,7 @@ function OnButtonClick() {
     
     <div class="all">
         <div>
-            <img src="images/person.gif">
+            <img src="images/person.gif" id="person">
         </div>
         <div class="test">
             <div class="all-content">
