@@ -216,6 +216,16 @@ div img{
     border: 3px solid #ffe3e5;
 }
 
+#english-chat{
+    float: left;
+    clear: both;
+    background-color: #bbded6;
+    margin: 20px 0 0 56px;
+    padding: 12px 20px;
+    text-align: left;
+    border-radius: 20px 20px 20px 0;
+}
+
 .left-text{
     float: left;
     clear: both;
