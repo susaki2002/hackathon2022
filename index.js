@@ -1,7 +1,9 @@
 import axios from './axios';
 
 
-let comment;
+let comment = 'hello';
+let data = JSON.stringify(comment);
+
 
 SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -22,7 +24,7 @@ h2.textContent = comment;
 const url = "./notebook7c3c0a745c.ipynb";
 axios
   .post(url, {
-     comment
+    data
   })
   .then(function (response) {
     console.log(response);
