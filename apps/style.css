@@ -193,58 +193,6 @@ section h2 span {
 	border-bottom: 3px solid #000;
 }
 
-.bms_message {
-	・・・
-}
-	/*
-	 *追加
-	 */
-	.bms_message_box{
-		margin-top: 20px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
-		max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
-		font-size: 16px;
-	}
-		/*
-		*追加
-		*/
-		.bms_message_content{
-			padding: 30px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
-		}
-
-	/* メッセージ１（左側） */
-	.bms_left {
-		margin-left: 50%;
-		float: left;
-		line-height: 1.3em;
-	}
-		/*
-		*追加
-		*/
-		.bms_left .bms_message_box {
-			color: rgb(0, 0, 0);/*テキストを黒にする*/
-			background: #fff;
-			border: 2px solid #000000;
-			border-radius: 30px 30px 30px 0px;/*左下だけ尖らせて吹き出し感を出す*/
-			margin-right: 50px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
-		}
-
-	/* メッセージ２（右側） */
-	.bms_right {
-		float: right;/*吹き出しをbms_messagesに対して右寄せ*/
-		line-height: 1.3em;
-	}
-		/*
-		*追加
-		*/
-		.bms_right .bms_message_box {
-			color: #fff;/*テキストを白にする*/
-			background: #000000;
-			border: 2px solid #000000;
-			border-radius: 30px 30px 0px 30px;/*右下だけ尖らせて吹き出し感を出す*/
-			margin-left: 50px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
-		}
-
-
 /* SEC04 PROJECT
 ------------------------------------------------------------*/
 #sec04{
