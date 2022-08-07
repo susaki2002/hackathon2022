@@ -8,22 +8,38 @@ $(function () {
                     $(this).toggleClass("click");
                 });
             });
-            function OnButtonClick() {
-                target = document.getElementById("button");
-                target_2 = document.getElementById("person");
-                if (target.value == "STOP \nSPEAKING") {
-                    button.textContent = 'START \nSPEAKING"';
-                    target.value = "START \nSPEAKING";
-                    target_2.src = "images/person.png";
-                } else {
-                    button.textContent = 'STOP \nSPEAKING';
-                    target.value = "STOP \nSPEAKING";
-                    target_2.src = "images/person.gif";
-                };
-            };
+var ai_is_speaking;
+ai_is_speaking=false;
+function OnButtonClick() {
+    if(ai_is_speaking==false){
+        target = document.getElementById("button");
+        target_2 = document.getElementById("person");
+        if (target.value == "STOP \nSPEAKING") {
+            ///「STOP」ボタンを押した場合の処理
+            button.textContent = 'ANSWERING...';
+            target.style.background= "#777777";
+            target.value = "ANSWERING...";
+            target_2.src = "images/person.gif";
+            ai_is_speaking = true;
+            setTimeout(function(){
+                ///5秒後にspeaking=falseにする
+                ai_is_speaking=false;
+                target.value = "START \nSPEAKING";
+                button.textContent = 'START \nSPEAKING';
+                target_2.src="images/person.png";
+                target.style.background= "#8ac6d1";
+                },5000);
+        } else {
+            ///「START」ボタンを押した場合の処理
+            button.textContent = 'STOP \nSPEAKING';
+            target.style.background= "#ffb6b9";
+            target.value = "STOP \nSPEAKING";
+            target_2.src = "images/person.png";
+        };
+    }
+};
     
-</script>
-    <meta charset="UTF-8">
+</script>    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人工知能英会話</title>
@@ -49,7 +65,7 @@ $(function () {
                 </header>
                 <div class="innerS">
                     音声認識システム、Synthetic voice
-                    システム、Microsoft社の開発した最新の自然言語処理NNモデルを用いたモデルのDialoGPTモデル。この３つのAIモデルを組み合わせることで英会話を行うことのできる人工知能が誕生しました。説明考えてちょーん。
+                    システム、Microsoft社の開発した最新の自然言語処理NNモデルを用いたモデルのDialoGPTモデル。この３つのAIモデルを組み合わせることで英会話を行うことのできる人工知能が誕生しました。
                 </div>
             </section>
             <!-- // MESSAGE -->
@@ -65,6 +81,8 @@ $(function () {
                     <li><img src="images/photo04.jpg" width="360" height="350" alt=""></li>
                     <li><img src="images/photo05.jpg" width="360" height="350" alt=""></li>
                     <li><img src="images/photo06.jpg" width="360" height="350" alt=""></li>
+                     </ul>
+                <div class="sec02-content">
                     <h2><span>No embrassment.</span></h2>
                     <div class="inner">
                         人工知能はコンピューターなので、英会話の恥ずかしさがありません。
@@ -79,31 +97,8 @@ $(function () {
                     <div class="inner">
                         人工知能が講師のため、価格をどんな英会話よりも下げることができます。
                     </div>
-                </ul>
-            </section>
-            <!-- COMPANY -->
-            <section id="sec05">
-                <header>
-                    <h2><span>COMPANY</span></h2>
-                </header>
-                <div class="inner">
-                    <ul class="col2">
-                        <li>
-                            <p>〒103-1234<br>見本県見本市仮区見本町1-3-5</p>
-                            <p>TEL 01234-567-8901</p>
-                            <p>e-Mail info@example.com</p>
-                            <p>営業時間 10:00〜20:00（水曜定休）</p>
-                            <p>※都合により休業する場合がございます</p>
-                        </li>
-                    </ul>
                 </div>
-
             </section>
-
-
-            <!-- // COMPANY -->
-            <footer id="footer">
-            </footer>
 
 
         </div>
@@ -111,13 +106,17 @@ $(function () {
 
 
     <!--英会話AI部分-->
-    
+    <section id="sec03">
+    <header>
+        <h2><span>PRODUCT</span></h2>
+    </header>
     <div class="all">
         <div>
             <img src="images/person.gif" id="person">
         </div>
         <div class="test">
             <div class="all-content">
+                <!--pタグクラス指定したものの左右分けをする-->
                     <p>
                        Hello.
                     </p>
@@ -126,13 +125,16 @@ $(function () {
                         I'm fine. I went to the cafe today. What were you doing today?
                     </p>
                     <p>I was reading a book.</p>
+            </div>
                   
         </div>
+           
         <p>
             <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="OnButtonClick();" id="button">
                 START<br>SPEAKING
             </button>
         </p>
     </div>
+    </section>
 </body>
 </html>
