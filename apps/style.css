@@ -223,6 +223,7 @@ div img{
 
 .left-text{
     float: left;
+    clear: both;
     background-color: #bbded6;
     padding: 12px 20px;
     border-radius: 20px 20px 20px 0;
@@ -238,6 +239,7 @@ div img{
 
 .right-text{
     float: right;
+    clear: both;
     background-color: #fae3d9;
     padding: 12px 20px;
     border-radius: 20px 20px 0 20px;
