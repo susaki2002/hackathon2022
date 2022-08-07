@@ -20,7 +20,7 @@ const h2 = document.createElement("h2");
 h2.textContent = comment;
 // document.body.appendChild(h1);
 
-const url = "./notebook7c3c0a745c.ipynb";
+const url = "../app.py";
 axios
   .post(url, {
     data
