@@ -11,14 +11,15 @@ $(function() {
 function OnButtonClick() {
           target = document.getElementById("button");
           target_2=document.getElementById("person");
-          if (target.value == "START"){
-              target.value="STOP";
+          if (target.value == "START\nSPEAKING"){
+              target.value="STOP\nSPEAKING";
               target_2.src="images/person.png";
           }else{
-              target.value="START";
+              target.value="START\nSPEAKING";
               target_2.src="images/person.gif";
           };
         };
+    
 </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,8 +27,8 @@ function OnButtonClick() {
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-　　　　　　　　<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-　　　　　　　　<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -68,7 +69,7 @@ function OnButtonClick() {
                 </div>
         </div>
         <p>
-            <input type="button" value="START" class="example4" onclick="OnButtonClick();" id="button">
+            <input type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="OnButtonClick();" id="button">
         </p>
     </div>
 </body>
