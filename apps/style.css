@@ -179,16 +179,10 @@ section h2 span {
 	margin: 0 auto;
 }
 
-#sec03 header{
-	display: none;
-}
-
 #sec03 h2{
 	width: 60%;
 	margin: 40px auto;
 	text-align: center;
-	margin-left: 50%;
-	
 	font-size: 22px;
 	font-weight:normal;
 }
