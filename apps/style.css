@@ -216,7 +216,7 @@ div img{
     border: 3px solid #ffe3e5;
 }
 
-#english-chat{
+#english-chat p{
     float: left;
     clear: both;
     background-color: #bbded6;
