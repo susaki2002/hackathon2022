@@ -38,10 +38,7 @@ def send():
     res = str(chat)
     res = res[res.find("bot >> ")+6:].strip()
     data = {"response":res}
-    step+=1
     return jsonify(data)
-
-#print(chat_history_ids)
 
 if __name__ == '__main__':
     app.run(debug=True)
