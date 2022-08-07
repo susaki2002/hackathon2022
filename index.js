@@ -28,6 +28,7 @@ axios
   })
   .then(function (response) {
     console.log(response);
+    response = JSON.parse(response);
     const h3 = document.createElement("h3");
     h3.textContent = response;
   })
