@@ -47,7 +47,7 @@ const url = "../app.py";
   $.ajax({
     type: "GET",
     url: "../venv/app.py",
-    data: { key: comment}
+    data: {key: comment}
   }).done(
     console.log('success!')
   ).fail(function() {
