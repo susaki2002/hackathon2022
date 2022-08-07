@@ -218,7 +218,7 @@ div img{
     float: left;
     clear: both;
     background-color: #bbded6;
-    margin: 20px 0 0 64px;
+    margin: 20px 0 0 56px;
     padding: 12px 20px;
     text-align: left;
     border-radius: 20px 20px 20px 0;
@@ -228,7 +228,7 @@ div img{
     float: right;
     clear: both;
     background-color: #fae3d9;
-    margin: 40px 40px 0 40px;
+    margin: 40px 56px 0 40px;
     padding: 12px 20px;
     text-align: right;
     border-radius: 20px 20px 0 20px;
