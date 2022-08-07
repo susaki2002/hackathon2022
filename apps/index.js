@@ -1,6 +1,8 @@
 import axios from './axios';
 
-let comment;
+
+let comment = 'hello';
+let data = JSON.stringify(comment);
 
 SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -18,14 +20,14 @@ const h2 = document.createElement("h2");
 h2.textContent = comment;
 // document.body.appendChild(h1);
 
-const url = "../app.py";
+const url = "./notebook7c3c0a745c.ipynb";
 axios
   .post(url, {
-    comment
+    data
   })
   .then(function (response) {
-    //console.log(response);
-    console.log(text);
+    console.log(response);
+    response = JSON.parse(response);
     const h3 = document.createElement("h3");
     h3.textContent = response;
   })
