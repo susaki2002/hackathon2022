@@ -218,7 +218,7 @@ div img{
 
 #english-chat{
    display: flex;
-　　　　　　flex-flow: column;
+	flex-flow: column;
 }
 
 #english-chat p{
