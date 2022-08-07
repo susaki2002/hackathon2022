@@ -2,43 +2,14 @@
 <html lang="ja">
 <head>
     <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="index.js"></script>
 <script>
 $(function () {
                 $(".example4").click(function () {
                     $(this).toggleClass("click");
                 });
             });
-var ai_is_speaking;
-ai_is_speaking=false;
-function OnButtonClick() {
-    if(ai_is_speaking==false){
-        target = document.getElementById("button");
-        target_2 = document.getElementById("person");
-        if (target.value == "STOP \nSPEAKING") {
-            ///「STOP」ボタンを押した場合の処理
-            button.textContent = 'ANSWERING...';
-            target.style.background= "#7d7d7d";
-            target.value = "ANSWERING...";
-            target_2.src = "images/person.gif";
-            ai_is_speaking = true;
-            setTimeout(function(){
-                ///5秒後にspeaking=falseにする
-                ai_is_speaking=false;
-                target.value = "START \nSPEAKING";
-                button.textContent = 'START \nSPEAKING';
-                target_2.src="images/person.png";
-                target.style.background= "#8ac6d1";
-                },5000);
-        } else {
-            ///「START」ボタンを押した場合の処理
-            button.textContent = 'STOP \nSPEAKING';
-            target.style.background= "#ffb6b9";
-            target.value = "STOP \nSPEAKING";
-            target_2.src = "images/person.png";
-        };
-    }
-};
-    
+
 </script>    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,12 +20,10 @@ function OnButtonClick() {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="module" src="index.js"> </script>
     
     <!--説明部分-->
         <div id="wrapper">
-
+            
         <div id="content">
             <h1> AI changes the world.</h1>
             <p id="mainImg"><img src="images/mainImg.png" alt=""></p>
@@ -81,7 +50,7 @@ function OnButtonClick() {
                     <li><img src="images/photo04.jpg" width="360" height="350" alt=""></li>
                     <li><img src="images/photo05.jpg" width="360" height="350" alt=""></li>
                     <li><img src="images/photo06.jpg" width="360" height="350" alt=""></li>
-                     </ul>
+                </ul>
                 <div class="sec02-content">
                     <h2><span>No embrassment.</span></h2>
                     <div class="inner">
@@ -92,18 +61,17 @@ function OnButtonClick() {
                     <div class="inner">
                         人間の講師を必要としないことから、レッスン時間は自由自在。どれだけ長く話しても問題ありません。
                     </div>
-
+                    
                     <h2><span>Cheaper than any.</span></h2>
                     <div class="inner">
                         人工知能が講師のため、価格をどんな英会話よりも下げることができます。
                     </div>
                 </div>
             </section>
-
-
+            
+            
         </div>
     </div>
-
 
     <!--英会話AI部分-->
     <section id="sec03">
@@ -119,26 +87,28 @@ function OnButtonClick() {
             <img src="images/person.gif" id="person">
         </div>
         <div class="test">
-            <div class="all-content">
-                <!--pタグクラス指定したものの左右分けをする 現在仮でclassつけて試してます-->
-                    <p class="right-text">
-                       Hello.
-                    </p>
-                    <p class="left-text">Hello. How are you？</p>
-                    <p class="right-text">
-                        I'm fine. I went to the cafe today. What were you doing today?
-                    </p>
-                    <p class="left-text">I was reading a book.</p>
+            <div class="all-content" id="english-chat">
+                <!--pタグクラス指定したものの左右分けをする-->
+                <p>
+                    Hello.
+                </p>
+                <p>Hello. How are you？</p>
+                <p>
+                    I'm fine. I went to the cafe today. What were you doing today?
+                </p>
+                <p>I was reading a book.</p>
             </div>
-                  
+            
         </div>
-           
+        
         <p>
-            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="OnButtonClick();" id="button">
+            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="speak();" id="button">
                 START<br>SPEAKING
             </button>
         </p>
     </div>
-    </section>
+</section>
+
+<script src="index.js"> </script>
 </body>
 </html>
