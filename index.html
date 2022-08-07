@@ -3,36 +3,136 @@
 <head>
     <script src="https://code.jquery.com/jquery.min.js"></script>
 <script>
-    $(function() {
-        $(".example4").click(function() {
-            $(this).toggleClass("click");
-        });
-    });
+$(function () {
+                $(".example4").click(function () {
+                    $(this).toggleClass("click");
+                });
+            });
+            function OnButtonClick() {
+                target = document.getElementById("button");
+                target_2 = document.getElementById("person");
+                if (target.value == "STOP \nSPEAKING") {
+                    button.textContent = 'START \nSPEAKING"';
+                    target.value = "START \nSPEAKING";
+                    target_2.src = "images/person.png";
+                } else {
+                    button.textContent = 'STOP \nSPEAKING';
+                    target.value = "STOP \nSPEAKING";
+                    target_2.src = "images/person.gif";
+                };
+            };
+    
 </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>人工知能英会話</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div>
-    <div class="test">
-
-    </div>
-    <p>
-        <input type="button" value="開始" class="example4" >
-    </p>
-    <!-- <script>
-        $(function() {
-            $(".example4").click(function() {
-                $(this).toggleClass("click");
-            });
-        });
-    </script> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="index.js"> </script>
+    
+    <!--説明部分-->
+        <div id="wrapper">
 
+        <div id="content">
+            <h1> AI changes the world.</h1>
+            <p id="mainImg"><img src="images/mainImg.png" alt=""></p>
+            <!-- MESSAGE -->
+            <section id="sec01">
+                <header>
+                    <h2><span>What is a conversational AI?</span></h2>
+                </header>
+                <div class="innerS">
+                    音声認識システム、Synthetic voice
+                    システム、Microsoft社の開発した最新の自然言語処理NNモデルを用いたモデルのDialoGPTモデル。この３つのAIモデルを組み合わせることで英会話を行うことのできる人工知能が誕生しました。説明考えてちょーん。
+                </div>
+            </section>
+            <!-- // MESSAGE -->
+            <!-- GALLERY -->
+            <section id="sec02">
+                <header>
+                    <h2><span>GALLERY</span></h2>
+                </header>
+                <ul id="gallery">
+                    <li><img src="images/photo01.jpg" width="360" height="350" alt=""></li>
+                    <li><img src="images/photo02.jpg" width="360" height="350" alt=""></li>
+                    <li><img src="images/photo03.jpg" width="360" height="350" alt=""></li>
+                    <li><img src="images/photo04.jpg" width="360" height="350" alt=""></li>
+                    <li><img src="images/photo05.jpg" width="360" height="350" alt=""></li>
+                    <li><img src="images/photo06.jpg" width="360" height="350" alt=""></li>
+                    <h2><span>No embrassment.</span></h2>
+                    <div class="inner">
+                        人工知能はコンピューターなので、英会話の恥ずかしさがありません。
+                    </div>
+
+                    <h2><span>Anywhere, anytime.</span></h2>
+                    <div class="inner">
+                        人間の講師を必要としないことから、レッスン時間は自由自在。どれだけ長く話しても問題ありません。
+                    </div>
+
+                    <h2><span>Cheaper than any.</span></h2>
+                    <div class="inner">
+                        人工知能が講師のため、価格をどんな英会話よりも下げることができます。
+                    </div>
+                </ul>
+            </section>
+            <!-- COMPANY -->
+            <section id="sec05">
+                <header>
+                    <h2><span>COMPANY</span></h2>
+                </header>
+                <div class="inner">
+                    <ul class="col2">
+                        <li>
+                            <p>〒103-1234<br>見本県見本市仮区見本町1-3-5</p>
+                            <p>TEL 01234-567-8901</p>
+                            <p>e-Mail info@example.com</p>
+                            <p>営業時間 10:00〜20:00（水曜定休）</p>
+                            <p>※都合により休業する場合がございます</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+
+            <!-- // COMPANY -->
+            <footer id="footer">
+            </footer>
+
+
+        </div>
+    </div>
+
+
+    <!--英会話AI部分-->
+    
+    <div class="all">
+        <div>
+            <img src="images/person.gif" id="person">
+        </div>
+        <div class="test">
+            <div class="all-content">
+                    <p>
+                       Hello.
+                    </p>
+                    <p>Hello. How are you？</p>
+                    <p>
+                        I'm fine. I went to the cafe today. What were you doing today?
+                    </p>
+                    <p>I was reading a book.</p>
+                  
+        </div>
+        <p>
+            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="OnButtonClick();" id="button">
+                START<br>SPEAKING
+            </button>
+        </p>
+    </div>
 </body>
 </html>
