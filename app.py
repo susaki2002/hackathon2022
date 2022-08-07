@@ -21,7 +21,8 @@ step=0
 # chatting 5 times with nucleus sampling & tweaking temperature
 @app.route('/', methods=['POST', 'GET'])
 def send():
-    comment = json.loads(request.data.decode('utf-8'))#input(json形式)で'key'がキー
+    # input (json format), key is the "key"
+    comment = json.loads(request.data.decode('utf-8'))
     input_txt = comment["key"]
     input_ids = tokenizer.encode(input_txt + tokenizer.eos_token, return_tensors="pt")
     bot_input_ids = torch.cat([chat_history_ids, input_ids], dim=-1) if step > 0 else input_ids
