@@ -107,6 +107,10 @@ section h2 span {
 	padding-bottom: 50px;
 }
 
+#sec01{
+	margin: 120px 0;
+}
+
 #sec03 .inner, #sec04 .inner{
 	border-bottom: 1px solid #a0a0a0;
 }
