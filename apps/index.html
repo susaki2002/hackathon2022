@@ -3,22 +3,24 @@
 <head>
     <script src="https://code.jquery.com/jquery.min.js"></script>
 <script>
-$(function() {
-    $(".example4").click(function() {
-        $(this).toggleClass("click");
-    });
-});
-function OnButtonClick() {
-          target = document.getElementById("button");
-          target_2=document.getElementById("person");
-          if (target.value == "STOP \nSPEAKING"){
-              target.value="START \nSPEAKING";
-              target_2.src="images/person.png";
-          }else{
-              target.value="STOP \nSPEAKING";
-              target_2.src="images/person.gif";
-          };
-        };
+$(function () {
+                $(".example4").click(function () {
+                    $(this).toggleClass("click");
+                });
+            });
+            function OnButtonClick() {
+                target = document.getElementById("button");
+                target_2 = document.getElementById("person");
+                if (target.value == "STOP \nSPEAKING") {
+                    button.textContent = 'START \nSPEAKING"';
+                    target.value = "START \nSPEAKING";
+                    target_2.src = "images/person.png";
+                } else {
+                    button.textContent = 'STOP \nSPEAKING';
+                    target.value = "STOP \nSPEAKING";
+                    target_2.src = "images/person.gif";
+                };
+            };
     
 </script>
     <meta charset="UTF-8">
