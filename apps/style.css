@@ -216,6 +216,10 @@ div img{
     border: 3px solid #ffe3e5;
 }
 
+#english-chat{
+   display: flex;
+}
+
 #english-chat p{
     float: left;
     clear: both;
@@ -225,6 +229,18 @@ div img{
     text-align: left;
     border-radius: 20px 20px 20px 0;
 }
+
+#english-chat p:nth-child(odd){
+    flex-direction: row-reverse;
+    float: right;
+    clear: both;
+    background-color: #fae3d9;
+    margin: 40px 56px 0 40px;
+    padding: 12px 20px;
+    text-align: right;
+    border-radius: 20px 20px 0 20px;
+}
+
 
 .left-text{
     float: left;
