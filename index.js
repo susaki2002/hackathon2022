@@ -4,7 +4,6 @@ import axios from './axios';
 let comment = 'hello';
 let data = JSON.stringify(comment);
 
-
 SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
 const recognition = new SpeechRecognition();
 
