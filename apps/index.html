@@ -11,11 +11,11 @@ $(function() {
 function OnButtonClick() {
           target = document.getElementById("button");
           target_2=document.getElementById("person");
-          if (target.value == "START\nSPEAKING"){
-              target.value="STOP\nSPEAKING";
+          if (target.value == "START &#13;&#10;SPEAKING"){
+              target.value="STOP&#13;&#10;SPEAKING";
               target_2.src="images/person.png";
           }else{
-              target.value="START\nSPEAKING";
+              target.value="START&#13;&#10;SPEAKING";
               target_2.src="images/person.gif";
           };
         };
