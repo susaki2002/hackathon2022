@@ -1,32 +1,78 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
 }
 
-body{
-text-align: center;
+.all{
+    text-align: center;
+}
+
+div img{
+    position: relative;
+    top: -16px;
+    margin: 10px 0 0 0;
+    width: 14%;
 }
 
 .test{
-width: 1000px;
-height: 560px;
-background: #000;
+    width: 1000px;
+    height: 400px;
+    background: #f5f5f5;
+    margin: -80px 0 24px 200px;
+    padding: 24px 12px;
+    border-radius: 64px;
+    border: 3px solid #ffe3e5;
+}
+
+.left-content{
+    float: left;
+    clear: both;
+    margin: 20px 0 0 64px;
+    text-align: left;
+}
+
+.left-text{
+    float: left;
+    background-color: #bbded6;
+    padding: 12px 20px;
+    border-radius: 20px 20px 20px 0;
+}
+
+
+.right-content{
+    float: right;
+    clear: both;
+    margin: 40px 40px 0 40px;
+    text-align: right;
+}
+
+.right-text{
+    float: right;
+    background-color: #fae3d9;
+    padding: 12px 20px;
+    border-radius: 20px 20px 0 20px;
 }
 
 .example4{
-display: block;
-width: 150px;
-background: #c8eac3;
-color: #000;
-padding: 10px;
-box-sizing: border-box;
-text-align: center;
-text-decoration: none;
-border-radius: 30px;
-cursor: pointer;
+    width: 120px;
+    height: 120px;
+    background: #8ac6d1;
+    color: #fbfbfb;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 8px 4px 10px rgb(0, 0, 0,0.1),
+    -8px -8px 12px rgba(0,0,0,0.1) inset;
 }
+
 .example4.click{
-background: #1a720d;
-color: #FFF;
+    background: #ffb6b9;
+    color: #fbfbfb;
+    box-shadow: 8px 4px 10px rgb(0, 0, 0,0.1),
+    8px 8px 12px rgba(0,0,0,0.1) inset;
 }
