@@ -8,21 +8,36 @@ $(function () {
                     $(this).toggleClass("click");
                 });
             });
-            function OnButtonClick() {
-                target = document.getElementById("button");
-                target_2 = document.getElementById("person");
-                if (target.value == "STOP \nSPEAKING") {
-                    button.textContent = 'START \nSPEAKING';
-                    target.style.background= "#8ac6d1";
-                    target.value = "START \nSPEAKING";
-                    target_2.src = "images/person.gif";
-                } else {
-                    button.textContent = 'STOP \nSPEAKING';
-                    target.style.background= "#ffb6b9";
-                    target.value = "STOP \nSPEAKING";
-                    target_2.src = "images/person.png";
-                };
-            };
+var ai_is_speaking;
+ai_is_speaking=false;
+function OnButtonClick() {
+    if(ai_is_speaking==false){
+        target = document.getElementById("button");
+        target_2 = document.getElementById("person");
+        if (target.value == "STOP \nSPEAKING") {
+            ///「STOP」ボタンを押した場合の処理
+            button.textContent = 'ANSWERING...';
+            target.style.background= "#777777";
+            target.value = "ANSWERING...";
+            target_2.src = "images/person.gif";
+            ai_is_speaking = true;
+            setTimeout(function(){
+                ///5秒後にspeaking=falseにする
+                ai_is_speaking=false;
+                target.value = "START \nSPEAKING";
+                button.textContent = 'START \nSPEAKING';
+                target_2.src="images/person.png";
+                target.style.background= "#8ac6d1";
+                },5000);
+        } else {
+            ///「START」ボタンを押した場合の処理
+            button.textContent = 'STOP \nSPEAKING';
+            target.style.background= "#ffb6b9";
+            target.value = "STOP \nSPEAKING";
+            target_2.src = "images/person.png";
+        };
+    }
+};
     
 </script>    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
