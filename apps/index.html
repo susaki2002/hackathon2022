@@ -8,6 +8,14 @@ $(function() {
         $(this).toggleClass("click");
     });
 });
+function OnButtonClick() {
+          target = document.getElementById("button");
+          if (target.value == "開始"){
+              target.value="停止";
+          }else{
+              target.value="開始";
+          };
+        };
 </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,7 +62,7 @@ $(function() {
                 </div>
         </div>
         <p>
-            <input type="button" value="開始" class="example4">
+            <input type="button" value="開始" class="example4" onclick="OnButtonClick();" id="button">
         </p>
     </div>
 </body>
