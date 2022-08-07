@@ -1,4 +1,4 @@
-// import axios from './axios';
+import axios from './axios';
 
 
 let comment = 'hello';
@@ -45,8 +45,8 @@ const url = "../app.py";
   //Ajax
 
   $.ajax({
-    type: "GET",
-    url: "../venv/app.py",
+    type: "POST",
+    url: "http://localhost:5000/",
     data: { key: comment}
   }).done(
     console.log('success!')
