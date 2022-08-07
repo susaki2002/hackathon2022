@@ -12,18 +12,19 @@ $(function () {
                 target = document.getElementById("button");
                 target_2 = document.getElementById("person");
                 if (target.value == "STOP \nSPEAKING") {
-                    button.textContent = 'START \nSPEAKING"';
+                    button.textContent = 'START \nSPEAKING';
+                    target.style.background= "#8ac6d1";
                     target.value = "START \nSPEAKING";
-                    target_2.src = "images/person.png";
+                    target_2.src = "images/person.gif";
                 } else {
                     button.textContent = 'STOP \nSPEAKING';
+                    target.style.background= "#ffb6b9";
                     target.value = "STOP \nSPEAKING";
-                    target_2.src = "images/person.gif";
+                    target_2.src = "images/person.png";
                 };
             };
     
-</script>
-    <meta charset="UTF-8">
+</script>    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人工知能英会話</title>
