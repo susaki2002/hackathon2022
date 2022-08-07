@@ -223,7 +223,6 @@ div img{
 
 #english-chat p{
     float: left;
-    clear: both;
     background-color: #bbded6;
     margin: 20px 0 0 56px;
     padding: 12px 20px;
@@ -235,7 +234,6 @@ div img{
 #english-chat p:nth-child(odd){
     flex-direction: row-reverse;
     float: right;
-    clear: both;
     background-color: #fae3d9;
     margin: 40px 56px 0 40px;
     padding: 12px 20px;
