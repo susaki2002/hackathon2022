@@ -3,15 +3,6 @@
         margin: 0;
         box-sizing: border-box;
 }
-
-body{
-    text-align: center;
-}
-
-.test{
-    width: 1000px;
-    height: 560px;
-    background: #000;
 }
 
 .example4{
@@ -29,4 +20,10 @@ body{
 .example4.click{
     background: #1a720d;
     color: #FFF;
+}
+
+.test{
+    width: 1300px;
+    height: 720px;
+    background: #FBFBFB;
 }
