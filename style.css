@@ -4,15 +4,57 @@
         box-sizing: border-box;
 }
 
-body{
+.all{
     text-align: center;
+}
+
+div img{
+    position: relative;
+    top: -16px;
+    margin: 10px 0 0 0;
+    width: 14%;
+
 }
 
 .test{
     width: 1000px;
-    height: 560px;
-    background: #000;
+    height: 400px;
+    background: #f5f5f5;
+    margin: -80px 0 24px 200px;
+    padding: 24px 12px;
+    border-radius: 64px;
+    border: 3px solid #ffe3e5;
 }
+
+.left-content{
+    float: left;
+    clear: both;
+    margin: 20px 0 0 64px;
+    text-align: left;
+}
+
+.left-text{
+    float: left;
+    background-color: #bbded6;
+    padding: 12px 20px;
+    border-radius: 20px 20px 20px 0;
+}
+
+
+.right-content{
+    float: right;
+    clear: both;
+    margin: 40px 40px 0 40px;
+    text-align: right;
+}
+
+.right-text{
+    float: right;
+    background-color: #fae3d9;
+    padding: 12px 20px;
+    border-radius: 20px 20px 0 20px;
+}
+
 
 .example4{
     width: 150px;
