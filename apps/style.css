@@ -1,0 +1,365 @@
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        color: #303030;
+}
+
+/*説明部分*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}
+ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+object,embed{vertical-align:top;}
+legend{display:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+img,abbr,acronym,fieldset{border:0;}
+
+body{
+	font: 14px/1.9 'Noto Sans JP', Arial, Verdana, 游ゴシック, YuGothic,'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo,sans-serif;
+	font-weight: 300;
+	-webkit-text-size-adjust:100%;
+	overflow-x: hidden;
+	color: #000;
+	background: #fff;
+}
+
+a{
+	color: #0066ff;
+	text-decoration: none;
+}
+
+a:hover, .active{
+  text-decoration: underline;
+}
+
+a:active, a:focus,input:active, input:focus{outline:0;}
+
+
+/* ヘッダー
+------------------------------------------------------------*/
+#mainnav a{
+	color: #000;
+	font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+}
+
+
+/* フッター
+------------------------------------------------------------*/
+#footer{
+	clear: both;
+	padding: 40px 10px 40px 0;
+	text-align: center;
+	font-size: 12px;
+}
+
+/*top*/
+#mainImg img{
+	width: 100%;
+}
+
+
+/* 共通
+------------------------------------------------------------*/
+h1{
+	width: 60%;
+	margin: 40px auto;
+	font-size: 50px;
+	font-weight:bold;
+	text-align: center;
+}
+
+h1, h2{
+	font-family: 'Times New Roman', 'odern Antiqua', 'Noto Sans JP',serif;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+section{
+  clear: both;
+}
+
+section h2{
+	width: 60%;
+	margin: 40px auto;
+	font-size: 22px;
+	font-weight:normal;
+	text-align: center;
+}
+
+section h2 span {
+	padding-bottom: 20px;
+	border-bottom: 3px solid #000;
+}
+
+.inner{
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+#sec03 .inner, #sec04 .inner{
+	border-bottom: 1px solid #a0a0a0;
+}
+
+.innerS{
+	width: 60%;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+
+/* SEC02 Gallery
+------------------------------------------------------------*/
+#sec02 h2{
+	width: 60%;
+	margin: 40px auto;
+	font-size: 22px;
+	font-weight:normal;
+}
+
+#sec02 h2 span {	
+	border-bottom: 3px solid #000;
+}
+
+#sec02 .inner{
+	text-align: center;
+}
+
+#sec02{
+	padding: 0 !important;
+}
+
+#sec02 header{
+	display: none;
+}
+
+#gallery{
+	overflow: hidden;
+}
+
+#gallery li{
+	float: left;
+	width: calc(100%/3);
+	line-height: 0;
+}
+#gallery li.full{
+	width: 100%;
+}
+
+
+#gallery img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+/* SEC03 BRAND
+------------------------------------------------------------*/
+.col4 .img{
+	margin: 0 auto;
+}
+
+#sec03 h2{
+	width: 60%;
+	margin: 40px auto;
+	text-align: center;
+	margin-left: 50%;
+	
+	font-size: 22px;
+	font-weight:normal;
+}
+
+#sec03 h2 span {	
+	border-bottom: 3px solid #000;
+}
+
+.bms_message {
+	・・・
+}
+	/*
+	 *追加
+	 */
+	.bms_message_box{
+		margin-top: 20px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
+		max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
+		font-size: 16px;
+	}
+		/*
+		*追加
+		*/
+		.bms_message_content{
+			padding: 30px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
+		}
+
+	/* メッセージ１（左側） */
+	.bms_left {
+		margin-left: 50%;
+		float: left;
+		line-height: 1.3em;
+	}
+		/*
+		*追加
+		*/
+		.bms_left .bms_message_box {
+			color: rgb(0, 0, 0);/*テキストを黒にする*/
+			background: #fff;
+			border: 2px solid #000000;
+			border-radius: 30px 30px 30px 0px;/*左下だけ尖らせて吹き出し感を出す*/
+			margin-right: 50px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
+		}
+
+	/* メッセージ２（右側） */
+	.bms_right {
+		float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+		line-height: 1.3em;
+	}
+		/*
+		*追加
+		*/
+		.bms_right .bms_message_box {
+			color: #fff;/*テキストを白にする*/
+			background: #000000;
+			border: 2px solid #000000;
+			border-radius: 30px 30px 0px 30px;/*右下だけ尖らせて吹き出し感を出す*/
+			margin-left: 50px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
+		}
+
+
+/* SEC04 PROJECT
+------------------------------------------------------------*/
+#sec04{
+	padding-bottom: 0 !important;
+}
+
+.article{
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 50px;
+}
+
+.article img{
+	float: left;
+	margin: 5px 20px 20px;
+}
+
+.article p{
+	margin-bottom: 20px;
+}
+
+
+
+/* SEC05 COMPANY
+------------------------------------------------------------*/
+#sec05 p{
+	margin-bottom: 5px;
+}
+
+.col2 li{
+	display: inline-block;
+	width: 100%;
+  margin: 20px 0;
+}
+
+#map{
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+	z-index: 0;
+}
+
+#map iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	border: 0;
+}
+
+
+/*英会話AIの部分*/
+
+.all{
+    text-align: center;
+}
+
+div img{
+    position: relative;
+    top: 0px;
+    width: 14%;
+}
+
+.test{
+    width: 1000px;
+    height: 400px;
+    background: #f5f5f5;
+    margin: -60px 0 24px 200px;
+    padding: 24px 12px;
+    border-radius: 64px;
+    border: 3px solid #ffe3e5;
+}
+
+.left-content{
+    float: left;
+    clear: both;
+    margin: 20px 0 0 64px;
+    text-align: left;
+}
+
+.left-text{
+    float: left;
+    background-color: #bbded6;
+    padding: 12px 20px;
+    border-radius: 20px 20px 20px 0;
+}
+
+
+.right-content{
+    float: right;
+    clear: both;
+    margin: 40px 40px 0 40px;
+    text-align: right;
+}
+
+.right-text{
+    float: right;
+    background-color: #fae3d9;
+    padding: 12px 20px;
+    border-radius: 20px 20px 0 20px;
+}
+
+.example4{
+    font-weight: 500;
+    width: 120px;
+    height: 120px;
+    background: #8ac6d1;
+    color: #fbfbfb;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 8px 4px 10px rgb(0, 0, 0,0.1),
+    -8px -8px 12px rgba(0,0,0,0.1) inset;
+}
+
+.example4.click{
+    background: #ffb6b9;
+    color: #fbfbfb;
+    box-shadow: 8px 4px 10px rgb(0, 0, 0,0.1),
+    8px 8px 12px rgba(0,0,0,0.1) inset;
+}
