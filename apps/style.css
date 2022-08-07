@@ -222,6 +222,7 @@ div img{
 }
 
 #english-chat p{
+	display:inline-block;
     float: left;
     background-color: #bbded6;
     margin: 20px 0 0 56px;
@@ -231,6 +232,7 @@ div img{
 }
 
 #english-chat p:nth-child(odd){
+	display:inline-block;
     flex-direction: row-reverse;
     float: right;
     background-color: #fae3d9;
