@@ -222,7 +222,7 @@ div img{
 }
 
 #english-chat p{
-	display:inline-block;
+    width: fit-content;
     background-color: #bbded6;
     margin: 20px 0 0 56px;
     padding: 12px 20px;
@@ -231,7 +231,7 @@ div img{
 }
 
 #english-chat p:nth-child(odd){
-	display:inline-block;
+    width: fit-content;
     flex-direction: row-reverse;
     background-color: #fae3d9;
     margin: 40px 56px 0 40px;
