@@ -228,7 +228,6 @@ div img{
     padding: 12px 20px;
     text-align: left;
     border-radius: 20px 20px 20px 0;
-	width: fit-content;
 }
 
 #english-chat p:nth-child(odd){
@@ -239,7 +238,6 @@ div img{
     padding: 12px 20px;
     text-align: right;
     border-radius: 20px 20px 0 20px;
-	width: fit-content;
 	justify-content:flex-end;
 }
 
