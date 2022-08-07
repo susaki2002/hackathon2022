@@ -44,12 +44,15 @@ const url = "../app.py";
   //axios
   //Ajax
 
-  $.ajax({
-    type: "GET",
-    url: "../venv/app.py",
-    data: {key: comment}
-  }).done(
-    console.log('success!')
-  ).fail(function() {
-    alert( "error" );
-  })
+$.ajax({
+  type: "POST",
+  url: ".../app.py",
+  data: {key: comment},
+  contentType:"application/json",
+  success: function(msg){
+    console.log(msg);
+  },
+  error: function(msg){
+    console.log("error");
+  }
+})
