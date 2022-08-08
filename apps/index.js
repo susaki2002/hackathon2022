@@ -208,11 +208,11 @@ const sendData = (comment) => {
         credentials:true
     }).done(function (res) {
         console.log('success!');
-        console.log('res:',res.response);
-        const msg = JSON.parse(res.response);
-        console.log('msg:', msg)
-        createMsg(msg, "AI");
-        speak();
+        console.log('res:',res);
+        // const msg = JSON.parse(res.response);
+        // console.log('msg:', msg)
+        createMsg(res.response , "AI");
+        speak(res.response);
     }
         ).fail(function(error) {  //alert( "error" );
         console.log(error);
