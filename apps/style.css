@@ -295,7 +295,7 @@ form div input[type="range"]{
 /* WebKit向けのつまみ */
 form div input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
-  background: #efebe4; /* 背景色 */
+  background: #e3ddd3; /* 背景色 */
   width: 24px; /* 幅 */
   height: 24px; /* 高さ */
   border-radius: 50%; /* 円形に */
@@ -304,7 +304,7 @@ form div input[type="range"]::-webkit-slider-thumb {
 
 /* Moz向けのつまみ */
 form div input[type="range"]::-moz-range-thumb {
-  background: #efebe4; /* 背景色 */
+  background: #e3ddd3; /* 背景色 */
   width: 24px; /* 幅 */
   height: 24px; /* 高さ */
   border-radius: 50%; /* 円形に */
