@@ -1,8 +1,8 @@
-const speak = () => {
+const fuga = () => {
     console.log("hogehoge");
     console.log('Ready to receive a color command.');
     
-    if(ai_is_speaking==false){
+    if (ai_is_speaking == false) {
         recognition.start();
         human_is_speaking = true;
         target = document.getElementById("button");
@@ -10,30 +10,29 @@ const speak = () => {
         if (target.value == "STOP \nSPEAKING") {
             ///「STOP」ボタンを押した場合の処理
             button.textContent = 'ANSWERING...';
-            target.style.background= "#777777";
+            target.style.background = "#777777";
             target.value = "ANSWERING...";
             target_2.src = "images/person.gif";
             ai_is_speaking = true;
-            setTimeout(function(){
+            setTimeout(function () {
                 ///5秒後にspeaking=falseにする
-                ai_is_speaking=false;
+                ai_is_speaking = false;
                 target.value = "START \nSPEAKING";
                 button.textContent = 'START \nSPEAKING';
-                target_2.src="images/person.png";
-                target.style.background= "#8ac6d1";
-                },5000);
+                target_2.src = "images/person.png";
+                target.style.background = "#8ac6d1";
+            }, 5000);
         } else {
             ///「START」ボタンを押した場合の処理
             button.textContent = 'STOP \nSPEAKING';
-            target.style.background= "#ffb6b9";
+            target.style.background = "#ffb6b9";
             target.value = "STOP \nSPEAKING";
             target_2.src = "images/person.png";
         };
     }
-}
+};
 
-let ai_is_speaking;
-ai_is_speaking = false;
+let ai_is_speaking = false;
 let human_is_speaking = false;
 
 
@@ -82,6 +81,112 @@ console.log('stop');
 // OnButtonClick();
 }
 
+//音声合成
+
+const synth = window.speechSynthesis;
+
+const inputForm = document.querySelector("form")
+const voiceSelect = document.querySelector("select");
+
+const pitch = document.querySelector("#pitch");
+const pitchValue = document.querySelector(".pitch-value");
+const rate = document.querySelector("#rate");
+const rateValue = document.querySelector(".rate-value");
+
+let voices = [];
+
+function populateVoiceList() {
+  voices = synth.getVoices().sort(function (a, b) {
+    const aname = a.name.toUpperCase();
+    const bname = b.name.toUpperCase();
+
+    if (aname < bname) {
+      return -1;
+    } else if (aname == bname) {
+      return 0;
+    } else {
+      return +1;
+    }
+  });
+  const selectedIndex =
+    voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
+  voiceSelect.innerHTML = "";
+
+  for (let i = 0; i < voices.length; i++) {
+    const option = document.createElement("option");
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+
+    if (voices[i].default) {
+      option.textContent += " -- DEFAULT";
+    }
+
+      option.setAttribute("data-lang", voices[i ].lang);
+      console.log("lang");
+    option.setAttribute("data-name", voices[i   ].name);
+    voiceSelect.appendChild(option);
+  }
+  voiceSelect.selectedIndex = selectedIndex;
+}
+
+populateVoiceList();
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = populateVoiceList;
+}
+
+function speak(comment) {
+  if (synth.speaking) {
+    console.error("speechSynthesis.speaking");
+    return;
+  }
+
+//   if (inputTxt.value !== "") {
+    const utterThis = new SpeechSynthesisUtterance(comment);
+
+    utterThis.onend = function (event) {
+      console.log("SpeechSynthesisUtterance.onend");
+    };
+
+    utterThis.onerror = function (event) {
+      console.error("SpeechSynthesisUtterance.onerror");
+    };
+
+    const selectedOption =
+      voiceSelect.selectedOptions[0].getAttribute("data-name");
+
+    for (let i = 0; i < voices.length; i++) {
+      if (voices[i].name === selectedOption) {
+          utterThis.voice = voices[i];
+        break;
+      }
+    }
+    utterThis.pitch = pitch.value;
+    utterThis.rate = rate.value;
+    synth.speak(utterThis);
+  }
+// }
+
+//  function (event) {
+//   event.preventDefault();
+
+//   speak();
+
+//   inputTxt.blur();
+// };
+
+pitch.onchange = function () {
+  pitchValue.textContent = pitch.value;
+};
+
+rate.onchange = function () {
+  rateValue.textContent = rate.value;
+};
+
+voiceSelect.onchange = function () {
+  speak();
+};
+
+
 
 //データ受け渡し
 // const xxx = {"key": "comment"}; 
@@ -100,11 +205,14 @@ const sendData = (comment) => {
         data: {"key": JSON.stringify(comment) }
     }).done(function (res) {
         console.log('success!');
-        console.log('res:',res[response]);
-        const msg = JSON.parse(res[response]);
+        console.log('res:',res.response);
+        const msg = JSON.parse(res.response);
         console.log('msg:', msg)
         createMsg(msg, "AI");
+        speak();
     }
         ).fail(function() {  alert( "error" );
     })
 }
+
+

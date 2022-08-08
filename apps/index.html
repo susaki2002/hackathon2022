@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="index.js"></script>
 <script>
 $(function () {
                 $(".example4").click(function () {
@@ -10,8 +9,9 @@ $(function () {
                 });
             });
 
-</script>    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人工知能英会話</title>
     <link rel="stylesheet" href="style.css">
@@ -102,13 +102,32 @@ $(function () {
         </div>
         
         <p>
-            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="speak();" id="button">
+            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="fuga();" id="button">
                 START<br>SPEAKING
             </button>
         </p>
     </div>
+    <form>
+        <div>
+          <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+          <div class="rate-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+          <div class="pitch-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <select>
+        </select>
+        <div class="controls">
+          <button id="play" type="submit">Play</button>
+        </div>
+        </form>
+
 </section>
 
 <script src="index.js"> </script>
+<script src="speaking.js"> </script>
 </body>
 </html>
