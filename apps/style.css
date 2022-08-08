@@ -336,6 +336,7 @@ form div input[type="range"]:active::-webkit-slider-thumb {
 
 select{
 	margin-top: 24px;
+	padding: 8px;
 }
 
 .controls{
