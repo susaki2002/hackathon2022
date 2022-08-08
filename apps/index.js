@@ -93,7 +93,7 @@ const url = "https://example.com/";
 
 const sendData = (comment) => {
     //Pythonの ポート番号が5000でなければ変更
-    let data = JSON.stringify({key:"Hi"})
+    let data = JSON.stringify({key:comment});
     $.ajax({
         type: "POST",
         url: "http://127.0.0.1:5000/",
@@ -109,6 +109,6 @@ const sendData = (comment) => {
         createMsg(res.response, "AI");
     }
         ).fail(function(error) {  //alert( "error" );
-        console.log(error)
+        console.log(error);
     })
 }
