@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
 $(function () {
                 $(".example4").click(function () {
@@ -89,21 +89,20 @@ $(function () {
         <div class="test">
             <div class="all-content" id="english-chat">
                 <!--pタグクラス指定したものの左右分けをする-->
-                <p>
+                <p class="human">
                     Hello.
                 </p>
-                <p>Hello. How are you？</p>
+                <p class="AI">Hello. How are you？</p>
                 <p>
                     I'm fine. I went to the cafe today. What were you doing today?
                 </p>
-                <p>I was reading a book.</p>
+                <p class="human">I was reading a book.</p>
             </div>
-            
         </div>
         
         <p>
-            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="fuga();" id="button">
-                START<br>SPEAKING
+            <button type="button" value="START &#13;&#10;SPEAKING" class="example4" onclick="speak();" id="button">
+                CLICK TO<br>SPEAK
             </button>
         </p>
     </div>
@@ -126,7 +125,6 @@ $(function () {
         </form>
 
 </section>
-
 <script src="index.js"> </script>
 <script src="speaking.js"> </script>
 </body>

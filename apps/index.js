@@ -197,12 +197,15 @@ const url = "https://example.com/";
 
 
 const sendData = (comment) => {
-
     //Pythonの ポート番号が5000でなければ変更
+    let data = JSON.stringify({key:"Hi"})
     $.ajax({
         type: "POST",
-        url: "http://localhost:5000/",
-        data: {"key": JSON.stringify(comment) }
+        url: "http://127.0.0.1:5000/",
+        data:data,
+        contentType:'application/json',
+        dataType: 'json',
+        credentials:true
     }).done(function (res) {
         console.log('success!');
         console.log('res:',res.response);
@@ -211,7 +214,8 @@ const sendData = (comment) => {
         createMsg(msg, "AI");
         speak();
     }
-        ).fail(function() {  alert( "error" );
+        ).fail(function(error) {  //alert( "error" );
+        console.log(error)
     })
 }
 
