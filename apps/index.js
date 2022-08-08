@@ -228,7 +228,3 @@ const sendData = (comment) => {
         console.log(error);
     })
 }
-sendData('Hello');
-sendData('Hello');
-sendData('Hello');
-
