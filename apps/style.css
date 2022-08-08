@@ -334,7 +334,7 @@ form div input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .controls{
-	margin: 20px auto;
+	margin: 32px auto;
 	margin-bottom: 12px;
 	
 }
