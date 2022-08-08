@@ -324,15 +324,17 @@ form div input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .rate-value{
-	margin: 20px auto;
+	margin: 12px auto;
 	margin-bottom: 32px;
 }
 
 .pitch-value{
-	margin: 20px auto;
+	margin: 12px auto;
 	margin-bottom: 32px;
 }
 
 .controls{
 	margin: 20px auto;
+	margin-bottom: 12px;
+	
 }
