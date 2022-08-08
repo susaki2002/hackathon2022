@@ -7,7 +7,7 @@ const fuga = () => {
         human_is_speaking = true;
         target = document.getElementById("button");
         target_2 = document.getElementById("person");
-        if (target.value == "STOP \nSPEAKING") {
+        if (target.value == "CLICK TO \nSTOP") {
             ///「STOP」ボタンを押した場合の処理
             button.textContent = 'ANSWERING...';
             target.style.background = "#777777";
@@ -16,17 +16,17 @@ const fuga = () => {
             ai_is_speaking = true;
             setTimeout(function () {
                 ///5秒後にspeaking=falseにする
-                ai_is_speaking = false;
-                target.value = "START \nSPEAKING";
-                button.textContent = 'START \nSPEAKING';
-                target_2.src = "images/person.png";
-                target.style.background = "#8ac6d1";
-            }, 5000);
+                ai_is_speaking=false;
+                target.value = "CLICK TO \nSPEAK";
+                button.textContent = 'CLICK TO \nSPEAK';
+                target_2.src="images/person.png";
+                target.style.background= "#8ac6d1";
+                },5000);
         } else {
             ///「START」ボタンを押した場合の処理
-            button.textContent = 'STOP \nSPEAKING';
-            target.style.background = "#ffb6b9";
-            target.value = "STOP \nSPEAKING";
+            button.textContent = 'CLICK TO \nSTOP';
+            target.style.background= "#ffb6b9";
+            target.value = "CLICK TO \nSTOP";
             target_2.src = "images/person.png";
         };
     }
@@ -198,7 +198,7 @@ const url = "https://example.com/";
 
 const sendData = (comment) => {
     //Pythonの ポート番号が5000でなければ変更
-    let data = JSON.stringify({key:"Hi"})
+    let data = JSON.stringify({key:comment});
     $.ajax({
         type: "POST",
         url: "http://127.0.0.1:5000/",
@@ -215,7 +215,7 @@ const sendData = (comment) => {
         speak();
     }
         ).fail(function(error) {  //alert( "error" );
-        console.log(error)
+        console.log(error);
     })
 }
 
