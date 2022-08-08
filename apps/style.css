@@ -226,6 +226,21 @@ div img{
    justify-content: space-between;
 }
 
+.AI{
+    float: left;
+    background-color: #bbded6;
+    padding: 12px 20px;
+    border-radius: 20px 20px 20px 0;
+}
+
+.human{
+    float: right;
+    background-color: #fae3d9;
+    padding: 12px 20px;
+    border-radius: 20px 20px 0 20px;
+}
+
+/*
 #english-chat p{
     width: fit-content;
     background-color: #bbded6;
@@ -245,6 +260,8 @@ div img{
     border-radius: 20px 20px 0 20px;
     margin-left: auto;
 }
+
+*/
 
 .example4{
     font-weight: 500;
