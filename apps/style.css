@@ -248,7 +248,7 @@ div img{
 
 .example4{
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     width: 120px;
     height: 120px;
     background: #8ac6d1;
@@ -290,6 +290,7 @@ form div input[type="range"]{
   background: #efebe4; /* バーの背景色 */
   border-radius: 10px; /* バーの両端の丸み */
   border: solid 0px #efebe4; /* バー周囲の線 */
+	margin: 20px auto;
 }
 
 /* WebKit向けのつまみ */
