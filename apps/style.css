@@ -333,8 +333,12 @@ form div input[type="range"]:active::-webkit-slider-thumb {
 	margin-bottom: 32px;
 }
 
+select{
+	margin-top: 24px;
+}
+
 .controls{
 	margin: 32px auto;
-	margin-bottom: 12px;
+	margin-bottom: 10px;
 	
 }
