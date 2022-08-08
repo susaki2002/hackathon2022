@@ -342,3 +342,20 @@ select{
 	margin-bottom: 10px;
 	
 }
+
+#play{
+	font-weight: 500;
+    width: 120px;
+    height: 60px;
+    background: #efebe4;
+    color: #303030;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 8px 4px 10px rgb(0, 0, 0,0.1),
+    -8px -8px 12px rgba(0,0,0,0.1) inset;
+}
