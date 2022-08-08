@@ -7,7 +7,7 @@ const speak = () => {
         human_is_speaking = true;
         target = document.getElementById("button");
         target_2 = document.getElementById("person");
-        if (target.value == "STOP \nSPEAKING") {
+        if (target.value == "CLICK TO \nSTOP") {
             ///「STOP」ボタンを押した場合の処理
             button.textContent = 'ANSWERING...';
             target.style.background= "#777777";
@@ -17,16 +17,16 @@ const speak = () => {
             setTimeout(function(){
                 ///5秒後にspeaking=falseにする
                 ai_is_speaking=false;
-                target.value = "START \nSPEAKING";
-                button.textContent = 'START \nSPEAKING';
+                target.value = "CLICK TO \nSPEAK";
+                button.textContent = 'CLICK TO \nSPEAK';
                 target_2.src="images/person.png";
                 target.style.background= "#8ac6d1";
                 },5000);
         } else {
             ///「START」ボタンを押した場合の処理
-            button.textContent = 'STOP \nSPEAKING';
+            button.textContent = 'CLICK TO \nSTOP';
             target.style.background= "#ffb6b9";
-            target.value = "STOP \nSPEAKING";
+            target.value = "CLICK TO \nSPEAK";
             target_2.src = "images/person.png";
         };
     }
