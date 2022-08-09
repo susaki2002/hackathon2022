@@ -197,6 +197,10 @@ section h2 span {
 	border-bottom: 3px solid #000;
 }
 
+#sec03 .innerS{
+	text-align: left;
+}
+
 /*英会話AIの部分*/
 
 .all{
@@ -226,6 +230,27 @@ div img{
    justify-content: space-between;
 }
 
+.AI{
+    float: left;
+    background-color: #bbded6;
+    padding: 12px 20px;
+	margin: 20px 0 0 56px;
+	text-align: left;
+    border-radius: 20px 20px 20px 0;
+	margin-right: auto;
+}
+
+.human{
+    float: right;
+    background-color: #fae3d9;
+    padding: 12px 20px;
+	margin: 40px 56px 0 40px;
+	text-align: right;
+    border-radius: 20px 20px 0 20px;
+	margin-left: auto;
+}
+
+/*
 #english-chat p{
     width: fit-content;
     background-color: #bbded6;
@@ -246,9 +271,11 @@ div img{
     margin-left: auto;
 }
 
+*/
+
 .example4{
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     width: 120px;
     height: 120px;
     background: #8ac6d1;
@@ -271,9 +298,98 @@ div img{
     8px 8px 12px rgba(0,0,0,0.1) inset;
 }
 
-.form{
-	width: 60%;
+form{
+	width: 56%;
 	background: #f5f5f5;
 	margin: 60px auto;
+	margin-top: 24px;
+	padding: 60px;
+	padding-bottom: 56px;
 	text-align: center;
+	border-radius: 60px;
+}
+
+form div input[type="range"]{
+	-webkit-appearance: none; /* 🚩これ無しだとスタイルがほぼ全く反映されないので注意 */
+  appearance: none;
+  cursor: pointer; /* カーソルを分かりやすく */
+  outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
+  height: 14px; /* バーの高さ */
+  width: 100%; /* バーの幅 */
+  background: #efebe4; /* バーの背景色 */
+  border-radius: 10px; /* バーの両端の丸み */
+  border: solid 0px #efebe4; /* バー周囲の線 */
+	margin: 20px auto;
+}
+
+/* WebKit向けのつまみ */
+form div input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
+  background: #e6e0d8; /* 背景色 */
+  width: 24px; /* 幅 */
+  height: 24px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+}
+
+/* Moz向けのつまみ */
+form div input[type="range"]::-moz-range-thumb {
+  background: #e6e0d8; /* 背景色 */
+  width: 24px; /* 幅 */
+  height: 24px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  border: none; /* デフォルトの線を消す */
+}
+
+/* Firefoxで点線が周りに表示されてしまう問題の解消 */
+form div input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+/* つまみをドラッグしているときのスタイル */
+form div input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.rate-value{
+	margin: 8px auto;
+	margin-bottom: 20px;
+}
+
+.pitch-value{
+	margin: 8px auto;
+	margin-bottom: 20px;
+}
+
+select{
+	margin-top: 24px;
+	padding: 4px;
+}
+
+.controls{
+	margin: 32px auto;
+	margin-bottom: 0;
+	
+}
+
+#play{
+	font-weight: 500;
+    width: 120px;
+    height: 60px;
+    background: #efebe4;
+    color: #303030;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 8px 4px 10px rgb(0, 0, 0,0.1),
+    -8px -8px 12px rgba(0,0,0,0.1) inset;
+}
+
+#play:hover{
+	background: #e6e0d8;
 }
