@@ -64,13 +64,24 @@ recognition.onresult = function (event) {
   sendData(comment);
 };
 
+let num = 4;
+const push_chat = (num) => {
+  let num_p = $('#english-chat > p').length
+  if (num_p >= 3){
+    $('.chat'+String(num-4)).remove();
+  }
+}
+console.log('.chat'+String(num-4))
 const createMsg = (comment, type) => {
-  const person = document.getElementById("english-chat");
-  let chat = document.createElement("p");
-  chat.textContent = comment;
-  chat.className = type;
-  person.append(chat);
-};
+    const person = document.getElementById('english-chat');
+    let chat = document.createElement("p");
+    chat.textContent = comment;
+    chat.className = type;
+    chat.className = "chat" + String(num);
+    person.append(chat);
+    num++
+    push_chat(num);
+}
 
 recognition.onspeechend = function () {
   recognition.stop();
